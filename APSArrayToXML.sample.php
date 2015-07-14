@@ -10,7 +10,9 @@ $arrayToXML->setArrayToXML(array(
         'test2',
         'test3' => array(
             'test4' => array(
-                'test5' => 'test6'
+                'test5' => 'test6',
+                'teste7' => 0,
+                'teste8' => '0'
             )
         )
     )

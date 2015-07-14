@@ -79,15 +79,15 @@ class APSArrayToXML {
         $xmlString = '';
         
         foreach ($array as $key => $value) {
-            if (!$value) {
+            if (!is_numeric($value) && (!isset($value) || $value == NULL)) {
                 // create key name
-                if (is_string($key)) {
+                if ($key != NULL) {
                     $xmlString .= '<' . $key . '/>';
                 }
             }
             else {
                 // create key name
-                if (is_string($key)) {
+                if ($key != NULL) {
                     $xmlString .= '<' . $key . '>';
                 }
                 
@@ -97,7 +97,7 @@ class APSArrayToXML {
                     $xmlString .= $this->_convertToString($value);
                 }
                 else {
-                    if ($key && is_string($key)) {
+                    if ($key != NULL) {
                         $xmlString .= '' . $value;
                     }
                     else {
@@ -106,7 +106,7 @@ class APSArrayToXML {
                 }
                 
                 // finish key
-                if (is_string($key)) {
+                if ($key != NULL) {
                     $keyArray = explode(' ', $key);
                     $xmlString .= '</' . $keyArray[0] . '>';
                 }
