@@ -116,7 +116,7 @@ class APSArrayToXML {
                 }
                 
                 // finish key
-                if ($key != NULL) {
+                if ($key != NULL && !is_numeric($key)) {
                     $keyArray = explode(' ', $key);
                     $xmlString .= '</' . $keyArray[0] . '>';
                 }
