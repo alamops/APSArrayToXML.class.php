@@ -14,6 +14,20 @@ $arrayToXML->setArrayToXML(array(
                 'teste7' => 0,
                 'teste8' => '0'
             )
+        ),
+        'teste9' => array(
+            array(
+                'key' => 'asasd',
+                'value' => 'asdasd'
+            ),
+            array(
+                'key' => 'asdasd',
+                'value' => 'asdasd'
+            ),
+            array(
+                'key' => 'asdasd',
+                'value' => 'asdasd'
+            )
         )
     )
 ));

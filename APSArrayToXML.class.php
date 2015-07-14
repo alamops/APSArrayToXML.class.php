@@ -6,6 +6,7 @@ class APSArrayToXML {
     private $xmlStringFinal;
     private $converted;
     private $xmlFinal;
+    private $lastKey;
     
     /**
      * CONSTRUCTOR
@@ -88,12 +89,21 @@ class APSArrayToXML {
             else {
                 // create key name
                 if ($key != NULL) {
-                    $xmlString .= '<' . $key . '>';
+                    if (!is_numeric($key)) {
+                        $xmlString .= '<' . $key . '>';
+                    }
+                    else {
+                        $xmlString .= '</' . $this->lastKey . '>';
+                        $xmlString .= '<' . $this->lastKey . '>';
+                    }
                 }
                 
                 // get xml
                 if (is_array($value)) {
                     // recursive
+                    if (!is_numeric($key)) {
+                        $this->lastKey = $key;
+                    }
                     $xmlString .= $this->_convertToString($value);
                 }
                 else {
