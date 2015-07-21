@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * @author: Alamo Pereira Saravali
+ * @email: alamo.sarvali@gmail.com
+ * @facebook: fb.me/alamosaravali
+ * @twitter: @alamosaravali
+ * @instagram: @alamoweb
+ * @website: alamoweb.com.br
+ */
+
 require_once 'APSArrayToXML.class.php';
 
 $arrayToXML = new APSArrayToXML();
