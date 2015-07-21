@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @author: Alamo Pereira Saravali
+ * @email: alamo.sarvali@gmail.com
+ * @facebook: fb.me/alamosaravali
+ * @website: alamoweb.com.br
+ */
+ 
 class APSArrayToXML {
     
     public $arrayToXML;
